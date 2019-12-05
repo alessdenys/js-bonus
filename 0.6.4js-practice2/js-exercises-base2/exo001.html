@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exo01</title>
+</head>
+<body>
+    <label for="longueur">longueur du rectangle : </label><input type="text" id="longueur">
+    <label for="largeur">largeur du rectangle : </label><input type="text" id="largeur">
+    <button id="run" >calculer la surface d'un rectangle</button>
+    <button id="valider">calculer le perimete d'un rectangle</button>
+    <script>
+        document.getElementById("run").addEventListener("click", () => {
+            //variables
+            let long = document.getElementById("longueur").value;
+            let large = document.getElementById("largeur").value;
+            
+            //surfaceRectangle
+            let surface = long * large;
+            alert("la surface de ce rectangle est de : " +surface);
+        }); // fin du click ==> surface
+
+        document.getElementById("valider").addEventListener("click", () => {
+            //variables
+            let long = document.getElementById("longueur").value;
+            let large = document.getElementById("largeur").value;
+            
+            //surfaceRectangle
+            let perimetre = (long *2) + (large * 2) ;
+            alert("le périmetre de ce rectangle est de : " +perimetre);
+        });
+
+    </script>
+</body>
+</html>

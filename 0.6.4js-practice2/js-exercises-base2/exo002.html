@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exo2</title>
+</head>
+<body>
+    <label for="rayon">rayon du cercle : </label><input type="text" id="rayon">
+    <button id="run" >calculer la surface d'un cercle</button>
+
+    <script>
+        document.getElementById("run").addEventListener("click", () =>{
+            let rayon = document.getElementById("rayon").value
+            let pi = Math.PI
+            let surface = (rayon * rayon) * pi
+
+            alert("la surface de ce cercle est de : " + surface)
+        })
+    </script>
+        
+    
+</body>
+</html>
