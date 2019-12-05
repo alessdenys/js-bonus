@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exo 10</title>
+</head>
+<body>
+    <button id="run">have fun</button>
+
+    <script>
+        document.getElementById("run").addEventListener("click", () => {
+            let somme = () => {
+                let first = prompt("saisissez un nombre");
+                let second = prompt("un autre");
+                let third = prompt("jamais deux sans trois");
+                alert(Number(first) + Number(second) + Number(third));
+            }
+            somme ();
+        })
+    </script>
+</body>
+</html>
