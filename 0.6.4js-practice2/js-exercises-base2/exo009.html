@@ -11,10 +11,19 @@
     <script>
     document.getElementById("run").addEventListener("click", () => {
         let testwhile =  () => {
-            let letter = prompt("écriver la lettre p");
-            console.log(letter)
+            let p = "p"
+            let letter = prompt("écrivez la lettre p");
+            if (letter == p) {
+        alert('"' + letter + '"')
+    }    
+    else{
+        testwhile();
+    }
         }
-    });
+    testwhile();
+    
+
+ });
     </script>
     
 </body>
