@@ -8,5 +8,45 @@
 </head>
 <body>
     <button id="run">have fun</button>
+
+    <script>
+        document.getElementById("run").addEventListener("click", () => {
+            let units = prompt("choose between the following, \n 0.Fin du programme \n 1.De Celsius vers Fahrenheit \n 2.De Celsius vers Kelvin \n 3.De Fahrenheit vers Celsius \n 4.De Fahrenheit vers Kelvin \n 5.De Kelvin vers Celsius \n 6.De Kelvin vers Fahrenheit");
+            let temp = prompt("now choose the value to convert");
+            let nUnits = Number(units);
+            let nTemp = Number(temp);
+            if (!isNaN(nTemp)){
+            switch (nUnits) {
+                case 0:
+                    alert("program off");
+                    break;
+                case 1:
+                    alert((nTemp * 9 / 5)+32 + "°F");
+                    break;
+                case 2:
+                    alert(nTemp + 273.15 + "°K");
+                    break;
+                case 3: 
+                    alert((nTemp - 32) / (9 / 5) + "°C");
+                break;
+                case 4: 
+                    alert(((nTemp - 32) * (5/9)) + 273.15 + "°K");
+                break;
+                case 5: 
+                    alert(nTemp - 273.15 + "°C");
+                break;
+                case 6: 
+                    alert((nTemp * 9/5) - 459.67 + "°F");
+                break;
+                default:
+                alert("invalid entry, try again");
+                    break;
+            }
+        }
+        else{
+            alert("invalid entry please try again")
+        }
+        });
+    </script>
 </body>
 </html>
