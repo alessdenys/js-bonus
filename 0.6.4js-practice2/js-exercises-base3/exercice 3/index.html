@@ -6,7 +6,13 @@
 </head>
 <body>
   <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" />
+    <label for="nom">Votre nom  : </label><input onkeydown="display()" type="text" name="nom" value="" id="nom" />
   </form>
+  <script>
+    let display = () => {
+      let inpt = document.getElementById("nom").value
+      alert(inpt)
+    }
+  </script>
 </body>
 </html>

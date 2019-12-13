@@ -7,39 +7,106 @@
     <title>exo 11</title>
 </head>
 <body>
-    <button id="run">have fun</button>
+    <button id="run" onclick="calculMoyenne()"">have fun</button>
     <script>
-        document.getElementById("run").addEventListener("click", () => {
-            let calculMoyenne = () => {
-                let numb = prompt("entrez un nombre ENTIER");
-                let number = Number(numb)
-                if (Number.isInteger(number)) {
-                    if (number >= 0) {
-                        while (number >=0) {
-                            let i = 0;
-                            while (i == 0) {
-                                let a = number;
-                            let second = prompt("entre un nouveau nombre entier");
-                            let secondNumb = Number(second);
-                            let b = secondNumb;
-                            let total = (a + b);
-                            alert(total)
-                            window.c = total
-                            i++
-                            }; //fin du if
-                            let third = prompt("toujours un entier")
-                            let thirdNumb = Number(third)
-                            let d = thirdNumb
-                            let addition = (d + c)
-                            alert(addition);
-                            window.c = addition;
-                        }
-                    }
-                }
-
-            }
-            calculMoyenne ();
-        })
+         let calculMoyenne = () => {
+             let count = 0;
+             let check = prompt("entrez un nombre entier");
+             let somme = 0;
+             if(isNaN(check)){
+                alert("Mauvaise enrées");
+                calculMoyenne();
+             }
+             else {
+                while (check >= 0) {
+                 if(Number.isInteger(Number(check))){
+                    count++;
+                    somme += Number(check);
+                    console.log("somme : " + somme)
+                 }
+                 else {
+                    alert("Mauvaise entrées, veuillez entrer un nombre entier");
+                 }
+                 check = prompt("entrez un nombre entier");
+                 if(isNaN(check)){
+                alert("Mauvaise enrées");
+                calculMoyenne();
+             }
+             }
+             if (check < 0) {
+                 let moyen = somme / count;
+                 alert(moyen);
+                 alert(somme);
+                 console.log(count)
+             }
+             }
+             
+         }
     </script>
 </body>
 </html>
+
+
+
+
+<!-- document.getElementById("run").addEventListener("click", () => {
+    window.entry = [];
+    let calculMoyenne = () => {
+        let numb = prompt("entrez un nombre ENTIER");
+        window.i = 0
+        let number = Number(numb);
+        if (Number.isInteger(number)) {
+            if (number >= 0) {
+                window.entry.push(number);
+                let a = number;
+                    let second = prompt("entre un nouveau nombre entier");
+                    let secondNumb = Number(second);
+                    let b = secondNumb;
+                    if (b >= 0) {
+                        window.entry.push(b);
+                        let total = (a + b);
+                        alert(total)
+                        window.c = total 
+                        window.addition = 0;
+                        while (window.addition >= 0) {
+                        window.third = prompt("toujours un entier")
+                        let thirdNumb = Number(window.third)
+                        window.d = thirdNumb 
+                        if (window.d >= 0) {
+                            window.entry.push(d);
+                            console.log(window.entry);
+                            window.addition = (d + c);
+                            window.c = addition;
+                            console.log(window.entry);
+                            alert(window.addition);
+                            }
+                            
+                             //else d >= 0
+                        else {
+                            alert("d over")
+                            calculMoyenne()
+                        }//fin du else
+
+                        }//fin while addition > 0
+                       
+
+                    }
+                    //else b >= 0
+                    else { 
+                        alert("b over")
+                        calculMoyenne();
+                    }//fin du else
+                    
+            }
+            //else number >= 0
+            else{
+                alert("number over")
+            }//fin du else
+
+        }
+        //else number is integer
+        else {
+            alert("veuillez entrer un nombre entier");
+            calculMoyenne();
+        }//fin du else
+    }//fin de la fonction -->

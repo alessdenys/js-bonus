@@ -6,7 +6,13 @@
 </head>
 <body>
   <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom"/>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onfocusout="triger()"/>
   </form>
+
+  <script>
+    let triger = () => {
+      alert("merci de votre participation")
+    }
+  </script>
 </body>
 </html>
